@@ -2,7 +2,7 @@ import React from 'react'
 
 const Games = () => {
     return (
-        <div>This is the list of games</div>
+        <div>This is the games page</div>
     )
 }
 
