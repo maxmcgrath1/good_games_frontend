@@ -5,6 +5,7 @@ import { useState } from "react";
 const Board = () => {
     const [squares, setSquares]=useState(Array(9).fill(null));
     const [player, setPlayer]=useState(true);
+    const nextPlayer = player ? "X" : "O";
     const winner = checkWin(squares);
     
     return (
@@ -21,14 +22,17 @@ const Board = () => {
                 {renderSquare(8)}
             </div>
             <h2 className="gameMessage">{gameStatus()} </h2>
+            <div className="restart">{renderRestart()}</div>
         </div>    
     );
 
     function renderSquare(i) {
-        return <Square value={squares[i]} 
-                onClick={() => {
+        return <Square value={squares[i]} onClick={() => {
+                    if (squares[i] != null || winner != null) {
+                        return;
+                    }
                     const newSquares = squares.slice();
-                    newSquares[i] = player ? "X" : "O";
+                    newSquares[i] = nextPlayer
                     setSquares(newSquares);
                     setPlayer(!player);
                 }} />;
@@ -52,17 +56,44 @@ const Board = () => {
             }
         }
         return null;
-    }
+    };
+
+    function checkDraw(squares) {
+        for (let i=0; i<squares.length; i++) {
+            if (squares[i] == null) {
+                return false;
+            }
+        }
+        return true;
+    };
+
     function gameStatus() {
         if (winner) {
             return "Game over, the winner is player " + winner + "!";
-        // } else if (checkDraw(squares)) {
+        } else if (checkDraw(squares)) {
             return "This round is a draw!";
         } else {
-            return "Player " + (player ? "X" : "O") + " is up, pick your square!"
+            return "Player " + nextPlayer + " is up, pick your square!"
         }
-    }
-}
+    };
+
+    function renderRestart() {
+        return (
+            <Restart onClick={() => {
+                setSquares(Array(9).fill(null));
+                setPlayer(true);
+            }}
+            />
+        );
+    };
+};
+
+function Restart({onClick}) {
+    return (
+        <button className="resetGame" onClick={onClick}>Play Again</button>
+    );
+};
+
 
 
 

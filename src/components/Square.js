@@ -1,6 +1,4 @@
 import React from 'react';
-// import { ReactDOM } from 'react-dom';
-// import { useState } from 'react';
 
 const Square = ({value, onClick}) => {
 	return (
