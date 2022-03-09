@@ -1,31 +1,28 @@
 import { Link } from "react-router-dom";
+import Nav from 'react-bootstrap/Nav'
 
-function Header(props) {
-    //inline style for the nav tag
-    const navStyle = {
-        display: "flex",
-        justifyContent: "space-around",
-        border: "3px solid black",
-        padding: "8px",
-        width: "90%",
-        margin: "auto",
-    };
 
+function Header() {
     return (
-        <header>
+        <div>
             <h1 className="maintitle">Welcome to the Games</h1>
-            <nav style={navStyle}>
-                <Link to="/">
-                    <div>HOME</div>
-                </Link>
-                <Link to="/games">
-                    <div>GAMES</div>
-                </Link>
-                <Link to="/about">
-                    <div>ABOUT/CONTACT</div>
-                </Link>
-            </nav>
-        </header>
+            <Nav fill variant="tabs" defaultActiveKey="">
+                <Nav.Item>
+                    <Nav.Link href="/">HOME</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link eventKey="/games" href="/games">GAMES</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link eventKey="/about" href="/about">ABOUT/CONTACT</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link eventKey="disabled" disabled>
+                        LOGIN/SIGNUP
+                    </Nav.Link>
+                </Nav.Item>
+            </Nav>
+        </div>
     );
 }
 

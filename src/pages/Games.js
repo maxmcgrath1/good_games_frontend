@@ -1,8 +1,15 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 const Games = () => {
     return (
-        <div>This is the games page</div>
+        <div>
+            <h3>This is the games page</h3>
+            <Link to="/games/tictactoe">
+                    <div>Tic-Tac-Toe</div>
+            </Link>
+        </div>
+    
     )
 }
 

@@ -44,11 +44,11 @@
   height: 500px;
   width: 500px;
 	background-color: blue;
-  border: solid red 5px;
+  border: solid red 7px;
   font-size: 30px;
 };
 
-.square {
+button.square {
   border: solid red 25px;
-  font-size: 30px;
+  color: blue;
 }
