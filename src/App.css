@@ -48,6 +48,7 @@
   font-size: 30px;
 };
 
-Square {
-  border: solid red 5px;
+.square {
+  border: solid red 25px;
+  font-size: 30px;
 }
