@@ -9,7 +9,7 @@ const Board = () => {
     const winner = checkWin(squares);
     
     return (
-        <div class="gameContainer">
+        <div className="gameContainer">
             <div className="gameBoard">
                 {renderSquare(0)}
                 {renderSquare(1)}
