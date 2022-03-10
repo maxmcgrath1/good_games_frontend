@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import GameList from './components/GameList';
 
 function App() {
-  const URL = "https://capstone-good-games.herokuapp.com/"
+  const URL = "http://localhost:4000/"
   return (
     <div className="App">
       <Header />

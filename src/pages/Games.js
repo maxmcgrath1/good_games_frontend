@@ -20,8 +20,10 @@ const Games = (props) => {
     const loaded = () => {
         return games.map((game) => (
             <div key={game._id} className="game">
-                <h1>{game.name}</h1>
-                <img src={game.image} alt={game.name} />
+                <Link to="/games/tictactoe">
+                    <h1>{game.name}</h1>
+                    <img src={game.image} alt={game.name} />
+                </Link>
                 <h3>{game.description}</h3>
             </div>
         ))
@@ -33,10 +35,7 @@ const Games = (props) => {
 
         return (
             <div>
-            <h3>This is the games page</h3>
-            <Link to="/games/tictactoe">
-                    <div>Tic-Tac-Toe</div>
-            </Link>
+            <h3>This is the games page. Click on a game's name or image to play!</h3>
             {games ? loaded() : loading()}
         </div>
     )

@@ -1,6 +1,7 @@
 import React from "react";
 import Square from "./Square";
 import { useState } from "react";
+import Button from 'react-bootstrap/Button'
 
 const Board = () => {
     const [squares, setSquares]=useState(Array(9).fill(null));
@@ -90,7 +91,7 @@ const Board = () => {
 
 function Restart({onClick}) {
     return (
-        <button className="resetGame" onClick={onClick}>Play Again</button>
+        <Button variant="outline-info" onClick={onClick}>Play Again</Button>
     );
 };
 
