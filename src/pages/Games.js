@@ -7,18 +7,16 @@ const Games = (props) => {
     const [games, setGames] = useState([]);
 
     const getGamesData = async () => {
-        const response = await fetch(props.URL);
+        const response = await fetch(props.URL + "games");
         // console.log(response)
         const data = await response.json();
         // console.log(data)
         setGames(data);
     };
 
-    // make an initial call for the data inside a useEffect, so it only happens once on component load
     useEffect(() => getGamesData(), []);
 
     
-    console.log(games)
     const loaded = () => {
         return games.map((game) => (
             <div key={game._id} className="game">
