@@ -48,7 +48,7 @@
   font-size: 30px;
 };
 
-button.square {
+button .square {
   border: solid red 25px;
   color: blue;
 }
