@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
+import Counter from '../components/Counter';
+
 
 const Games = (props) => {
 
@@ -16,7 +18,7 @@ const Games = (props) => {
 
     useEffect(() => getGamesData(), []);
 
-    
+
     const loaded = () => {
         return games.map((game) => (
             <div key={game._id} className="game">
@@ -24,6 +26,7 @@ const Games = (props) => {
                     <h1>{game.name}</h1>
                     <img src={game.image} alt={game.name} />
                 </Link>
+                <Counter />
                 <h3>{game.description}</h3>
             </div>
         ))
@@ -33,12 +36,12 @@ const Games = (props) => {
         return <h1>Loading...</h1>
     }
 
-        return (
-            <div>
+    return (
+        <div>
             <h3>This is the games page. Click on a game's name or image to play!</h3>
             {games ? loaded() : loading()}
         </div>
     )
-};
 
+};
 export default Games
