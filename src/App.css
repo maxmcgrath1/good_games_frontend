@@ -1,5 +1,15 @@
 .App {
   text-align: center;
+  
+}
+
+.home {
+  background-image: url("https://wallpaperaccess.com/full/273307.jpg");
+}
+
+.gameBack {
+  background-image: url("https://www.teahub.io/photos/full/6-62739_high-resolution-cartoon-wallpapers-23687-hd-wallpapers-4d.jpg");
+  background-size: 1300px 1300px;
 }
 
 .App-logo {
@@ -64,6 +74,12 @@
   color: blue;
 }
 
-.w-100 {
-  height: 80vh;
+
+.slideContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
 }
+
+

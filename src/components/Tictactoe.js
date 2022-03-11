@@ -7,7 +7,7 @@ import Board from './Board'
 
 const Tictactoe = () => {
     return (
-        <div>
+        <div className="gameBack">
             <h1>Tic-Tac-Toe!</h1>
             <Board />
         </div>
