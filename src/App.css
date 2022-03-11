@@ -37,6 +37,17 @@
   }
 }
 
+.gameDescription {
+  color: red
+}
+
+.gamesMessage {
+  color: red;
+}
+
+.maintitle {
+  color: red;
+}
 .gameBoard {
   display: grid;
   margin: 0 auto;
@@ -51,4 +62,8 @@
 .square {
   border: solid red 5px;
   color: blue;
+}
+
+.w-100 {
+  height: 80vh;
 }

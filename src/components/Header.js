@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav'
 function Header() {
     return (
         <div>
-            <h1 className="maintitle">Welcome to Good Games!</h1>
+            <h1 className="maintitle">Good Games!</h1>
             <Nav fill variant="tabs" defaultActiveKey="">
                 <Nav.Item>
                     <Nav.Link href="/">HOME</Nav.Link>

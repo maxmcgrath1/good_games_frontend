@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 
 export default function Counter() {
-    const [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useState(73);
     const handleIncrement = () => {
         setCounter(counter + 1);
     };
