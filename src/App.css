@@ -9,7 +9,7 @@
 
 .gameBack {
   background-image: url("https://www.teahub.io/photos/full/6-62739_high-resolution-cartoon-wallpapers-23687-hd-wallpapers-4d.jpg");
-  background-size: 1300px 1300px;
+  background-size: 1700px 1300px;
 }
 
 .App-logo {
@@ -55,6 +55,18 @@
   color: red;
 }
 
+.gameText {
+  color: rgb(6, 218, 247)
+}
+
+.gameTitle {
+  color: rgb(6, 218, 247)
+}
+
+.homeMessage {
+  color: teal;
+}
+
 .maintitle {
   color: red;
 }
@@ -80,6 +92,14 @@
   justify-content: center;
   align-items: center;
   height: 500px;
+}
+
+.slideName {
+  color: red;
+}
+
+.slideText {
+  color: red;
 }
 
 

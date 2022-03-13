@@ -14,8 +14,8 @@ const Home = () => {
                             alt="Tic-Tac-Toe"
                         />
                         <Carousel.Caption>
-                            <h3>Tic-Tac-Toe</h3>
-                            <p>It'll always be good.</p>
+                            <h3 className='slideName'>Tic-Tac-Toe</h3>
+                            <p className='slideText'>It'll always be good.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -26,8 +26,8 @@ const Home = () => {
                         />
 
                         <Carousel.Caption>
-                            <h3>Blackjack</h3>
-                            <p>This is a good card game.</p>
+                            <h3 className='slideName'>Blackjack</h3>
+                            <p className='slideText'>This is a good card game.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -38,8 +38,8 @@ const Home = () => {
                         />
 
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <h3 className='slideName'>Third game name</h3>
+                            <p className='slideText'>A third good game</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

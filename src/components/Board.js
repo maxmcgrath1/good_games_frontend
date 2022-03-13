@@ -22,7 +22,7 @@ const Board = () => {
                 {renderSquare(7)}
                 {renderSquare(8)}
             </div>
-            <h2 className="gameMessage">{gameStatus()} </h2>
+            <div>{gameStatus()}</div>
             <div className="restart">{renderRestart()}</div>
         </div>    
     );
@@ -70,11 +70,11 @@ const Board = () => {
 
     function gameStatus() {
         if (winner) {
-            return "Game over, the winner is player " + winner + "!";
+            return <h1 className="gameText">Game over, the winner is Player {winner}!</h1>;
         } else if (checkDraw(squares)) {
-            return "This round is a draw!";
+            return <h1 className="gameText">This round is a draw!</h1>;
         } else {
-            return "Player " + nextPlayer + " is up, pick your square!"
+            return <h1 className="gameText"> Player {nextPlayer} is up, pick your square!</h1>;
         }
     };
 
@@ -91,7 +91,7 @@ const Board = () => {
 
 function Restart({onClick}) {
     return (
-        <Button variant="outline-info" onClick={onClick}>Play Again</Button>
+        <Button variant="primary" onClick={onClick}>Play Again</Button>
     );
 };
 
