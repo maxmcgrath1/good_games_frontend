@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom"
 import Counter from '../components/Counter';
-
 
 const Games = (props) => {
 
@@ -23,6 +23,18 @@ const Games = (props) => {
             },
         body: JSON.stringify(game),
         });
+        getGamesData();
+    };
+
+    const updateGame = async (game, id) => {
+        await fetch(props.URL + "games" + id, {
+            method: "put",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(game),
+        })
+        // update list of people
         getGamesData();
     };
 
@@ -53,7 +65,9 @@ const Games = (props) => {
     const loaded = () => {
         return games.map((game) => (
             <div key={game._id} className="game">
-                <h1>{game.name}</h1>
+                <Link to={`/games/${game._id}`}>
+                    <h1>{game.name}</h1>
+                </Link>
                 <img src={game.image} alt={game.name} />
                 <h3 className="gameDescription">{game.description}</h3>
                 <Counter />
