@@ -5,11 +5,14 @@
 
 .home {
   background-image: url("https://wallpaperaccess.com/full/273307.jpg");
+  background-size: cover;
+  padding: 0 0 260px 0;
 }
 
 .gameBack {
   background-image: url("https://www.teahub.io/photos/full/6-62739_high-resolution-cartoon-wallpapers-23687-hd-wallpapers-4d.jpg");
-  background-size: 1700px 1300px;
+  background-size: cover;
+  padding: 0 0 220px 0;
 }
 
 .App-logo {
@@ -48,7 +51,24 @@
 }
 
 .gameDescription {
-  color: red
+  color: red;
+}
+
+.gameImage {
+  height: 400px;
+  width: 400px;
+  border: solid teal 5px;
+}
+
+.gameList {
+  height: 650px;
+  border: solid teal 2px;
+}
+
+.gameName {
+  color: red;
+  padding: 50px 0 0 0;
+
 }
 
 .gamesMessage {
@@ -100,6 +120,7 @@
 
 .slideText {
   color: red;
+  font-weight: bold;
 }
 
 

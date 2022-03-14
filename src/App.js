@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Home />} /> 
         <Route path="/games"  element={<Games URL={URL} />} />
         <Route path="/games/:id" element={<Show URL={URL} />} />
-        <Route path="/games/tictactoe" element={<Tictactoe URL={URL} />} />
+        <Route path="/games/Tic-Tac-Toe" element={<Tictactoe URL={URL} />} />
         <Route path="/about"  element={<About URL={URL} />} />
       </Routes>
     </div>

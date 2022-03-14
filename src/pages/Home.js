@@ -10,7 +10,7 @@ const Home = () => {
                     <Carousel.Item>
                         <img
                             // className="d-block w-100"
-                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F395%2F1*ELxNO3RFHEpG_2JsViRILw.png&f=1&nofb=1"
+                            src="https://media.istockphoto.com/photos/ticktacktoe-on-chalkboard-picture-id1134456281?k=20&m=1134456281&s=612x612&w=0&h=Qf7ajVwWoqf2z_6FqdAWGVCHbUMOdXApqdS6brx-w00="
                             alt="Tic-Tac-Toe"
                         />
                         <Carousel.Caption>
@@ -33,7 +33,7 @@ const Home = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="holder.js/800x400?text=Third slide&bg=20232a"
+                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.o13ZDt5EmLrlXBwqPRja1QAAAA%26pid%3DApi&f=1"
                             alt="Third slide"
                         />
 

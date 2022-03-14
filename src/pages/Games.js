@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom"
 import Counter from '../components/Counter';
+import Button from 'react-bootstrap/esm/Button';
 
 const Games = (props) => {
 
@@ -50,14 +51,15 @@ const Games = (props) => {
 
     const loaded = () => {
         return games.map((game) => (
-            <div key={game._id} className="game">
-                <h1>{game.name}</h1>
-                <img src={game.image} alt={game.name} />
+            <div key={game._id} className="gameList">
+                <h1 className='gameName'>{game.name}</h1>
+                <img className='gameImage' src={game.image} alt={game.name} />
                 <h3 className="gameDescription">{game.description}</h3>
                 <Link to={`/games/${game._id}`}>
                     Edit Game
                 </Link>
                 <Counter />
+                <Button variant="outline-info" href={`/games/${game.name}`}>Play Game</Button>
             </div>
         ))
     }
@@ -94,7 +96,6 @@ const Games = (props) => {
                 <input type="submit" value="Add Game" />
             </form>
         </section>
-            <h3 className="gamesMessage">This is the games page, it's good!</h3>
             {games ? loaded() : loading()}
         </div>
     )
