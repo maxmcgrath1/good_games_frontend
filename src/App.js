@@ -8,6 +8,7 @@ import Games from './pages/Games';
 import Show from './pages/Show';
 import Tictactoe from './components/Tictactoe';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SquareSmash from './components/SquareSmash';
 // import GameList from './components/GameList';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/games"  element={<Games URL={URL} />} />
         <Route path="/games/:id" element={<Show URL={URL} />} />
         <Route path="/games/Tic-Tac-Toe" element={<Tictactoe URL={URL} />} />
+        <Route path="/games/SquareSmash" element={<SquareSmash URL={URL} />} />
         <Route path="/about"  element={<About URL={URL} />} />
       </Routes>
     </div>

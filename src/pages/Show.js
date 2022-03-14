@@ -29,7 +29,7 @@ function Show(props) {
         await fetch(props.URL + "games/" + id, {
             method: "delete",
             })
-        getGamesData()
+        getGamesData();
     };
 
     
