@@ -27,7 +27,17 @@ const SquareSmash = () => {
     console.log(currentColorGroup)
 
     return (
-        <div>SquareSmash</div>
+        <div className='smashGameContainer'>
+            <div className='smashGameBoard'>
+                {currentColorGroup.map((squareColor, index) => (
+                    <img
+                        key={index}
+                        style={{backgroundColor: squareColor}}
+                        alt={squareColor}
+                    />
+                ))}
+            </div>
+        </div>
     )
 }
 
