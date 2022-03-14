@@ -26,18 +26,6 @@ const Games = (props) => {
         getGamesData();
     };
 
-    const updateGame = async (game, id) => {
-        await fetch(props.URL + "games" + id, {
-            method: "put",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(game),
-        })
-        // update list of people
-        getGamesData();
-    };
-
     useEffect(() => getGamesData(), []);
 
     const [newGame, setNewGame] = useState({
@@ -46,12 +34,10 @@ const Games = (props) => {
         description: "",
     });
 
-    // handleChange function for form
     const handleChange = (event) => {
         setNewGame({ ...newGame, [event.target.name]: event.target.value });
     };
 
-    // handle submit function for form
     const handleSubmit = (event) => {
         event.preventDefault();
         createGame(newGame);
