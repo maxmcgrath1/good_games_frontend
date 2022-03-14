@@ -44,7 +44,7 @@ function Show(props) {
     const handleSubmit = event => {
         event.preventDefault()
         updateGame(editGame, game._id)
-    //     props.history.push("/")
+        // props.history.push("/")
     }
 
     const removeGame = () => {
