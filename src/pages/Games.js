@@ -52,7 +52,7 @@ const Games = (props) => {
     const loaded = () => {
         return games.map((game) => (
             <div key={game._id} className="game">
-                    <h1>{game.name}</h1>
+                <h1>{game.name}</h1>
                 <img src={game.image} alt={game.name} />
                 <h3 className="gameDescription">{game.description}</h3>
                 <Link to={`/games/${game._id}`}>

@@ -90,7 +90,7 @@ function Show(props) {
     const loading = () => {
         return <h1>Loading...</h1>
     }
-    return game ? loaded(): loading();
+    return game ? loaded() : loading();
 }
 
 export default Show
