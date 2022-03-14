@@ -14,6 +14,17 @@ const sqaureColors = [
 const SquareSmash = () => {
     const [currentColorGroup, setCurrentColorGroup] = useState([]);
 
+    const checkColumnFour = () => {
+        for (let i = 0; i< 39; i++) {
+            const columnFour = [i, i + width, i + width * 2, i + width * 3]
+            const chosenColor = currentColorGroup[i]
+
+            if (columnFour.every(square => currentColorGroup[square] === chosenColor)) {
+                columnFour.forEach(square => currentColorGroup[square] = '')
+            }
+        }
+    };
+
     const checkColumnThree = () => {
         for (let i = 0; i< 47; i++) {
             const columnThree = [i, i + width, i + width * 2]
@@ -23,7 +34,7 @@ const SquareSmash = () => {
                 columnThree.forEach(square => currentColorGroup[square] = '')
             }
         }
-    }
+    };
 
     const createBoard = () => {
         const randomColorGroup = []
@@ -32,17 +43,18 @@ const SquareSmash = () => {
             randomColorGroup.push(randomColor)
         }
         setCurrentColorGroup(randomColorGroup)
-    }
+    };
 
     useEffect(() => createBoard(), []);
     
     useEffect(() => {
         const timer = setInterval(() => {
+            checkColumnFour()
             checkColumnThree()
             setCurrentColorGroup([...currentColorGroup])
         }, 100)
         return () => clearInterval(timer)
-    }, [checkColumnThree])
+    }, [checkColumnFour, checkColumnThree, currentColorGroup])
 
     console.log(currentColorGroup)
 
@@ -59,6 +71,6 @@ const SquareSmash = () => {
             </div>
         </div>
     )
-}
+};
 
 export default SquareSmash
