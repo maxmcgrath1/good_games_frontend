@@ -15,6 +15,7 @@ const SquareSmash = () => {
     const [currentColorGroup, setCurrentColorGroup] = useState([]);
     const [squareBeingMoved, setSquareBeingMoved] = useState(null);
     const [squareBeingReplaced, setSquareBeingReplaced] = useState(null);
+    const [scoreDisplay, setScoreDisplay] = useState(0)
 
     const checkColumnFour = () => {
         for (let i = 0; i <= 39; i++) {
@@ -22,6 +23,7 @@ const SquareSmash = () => {
             const chosenColor = currentColorGroup[i]
 
             if (columnFour.every(square => currentColorGroup[square] === chosenColor)) {
+                setScoreDisplay((score) => score + 4)
                 columnFour.forEach(square => currentColorGroup[square] = '')
                 return true;
             }
@@ -87,26 +89,20 @@ const SquareSmash = () => {
         }
     };
 
+    console.log(scoreDisplay);
+
     const dragStart = (event) => {
-        console.log(event.target)
-        console.log(dragStart)
         setSquareBeingMoved(event.target)
     };
     const dragDrop = (event) => {
-        console.log(event.target)
-        console.log(dragDrop)
         setSquareBeingReplaced(event.target)
     };
     const dragEnd = (event) => {
-        console.log(dragEnd)
         const movedId = parseInt(squareBeingMoved.getAttribute('data-id'))
         const replacedId = parseInt(squareBeingReplaced.getAttribute('data-id'))
 
         currentColorGroup[replacedId] = squareBeingMoved.style.backgroundColor
         currentColorGroup[movedId] = squareBeingReplaced.style.backgroundColor
-
-        console.log(movedId)
-        console.log(replacedId)
 
         const validMoves = [
             movedId + 1,
