@@ -98,7 +98,6 @@ const SquareSmash = () => {
         }
     };
 
-    console.log(scoreDisplay);
 
     const dragStart = (event) => {
         setSquareBeingMoved(event.target)
@@ -156,7 +155,7 @@ const SquareSmash = () => {
             checkRowThree();
             moveSquareDown();
             setCurrentColorGroup([...currentColorGroup])
-        }, 100)
+        }, 200)
         return () => clearInterval(timer)
     }, [checkColumnFour, checkRowFour, checkColumnThree, checkRowThree, moveSquareDown, currentColorGroup]);
 
