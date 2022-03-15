@@ -1,27 +1,4 @@
-.App {
-  text-align: center;
-  
-}
-
-.home {
-  background-image: url("https://wallpaperaccess.com/full/273307.jpg");
-  background-size: cover;
-  padding: 0 0 260px 0;
-}
-
-.ticTacBack {
-  background-image: url("https://www.teahub.io/photos/full/6-62739_high-resolution-cartoon-wallpapers-23687-hd-wallpapers-4d.jpg");
-  background-size: cover;
-  padding: 0 0 220px 0;
-}
-
-.smashGameBack {
-  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Cool-Backgrounds-Wide-Wallpapers.jpg");
-  background-size: cover;
-  padding: 0 0 220px 0;
-}
-
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -54,16 +31,33 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.App {
+  text-align: center;
+  
 }
 
-.gameDescription {
-  color: red;
+.home {
+  background-image: url("https://wallpaperaccess.com/full/273307.jpg");
+  background-size: cover;
+  padding: 0 0 260px 0;
 }
 
-.gameImage {
-  height: 400px;
-  width: 400px;
-  border: solid teal 5px;
+.homeMessage {
+  color: teal;
+}
+
+.ticTacBack {
+  background-image: url("https://www.teahub.io/photos/full/6-62739_high-resolution-cartoon-wallpapers-23687-hd-wallpapers-4d.jpg");
+  background-size: cover;
+  padding: 0 0 160px 0;
+}
+
+.smashGameBack {
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Cool-Backgrounds-Wide-Wallpapers.jpg");
+  background-size: cover;
+  padding: 0 0 220px 0;
 }
 
 .gameList {
@@ -80,20 +74,28 @@
 
 }
 
+.gameImage {
+  height: 400px;
+  width: 500px;
+  border: solid teal 5px;
+}
+
+.gameDescription {
+  color: red;
+}
+
+
 .gamesMessage {
   color: red;
 }
 
 .gameText {
-  color: rgb(6, 218, 247)
+  color: rgb(6, 218, 247);
 }
 
 .gameTitle {
-  color: rgb(6, 218, 247)
-}
-
-.homeMessage {
-  color: teal;
+  color: rgb(6, 218, 247);
+  padding: 30px;
 }
 
 .maintitle {
