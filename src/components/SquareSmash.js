@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import SmashScoreBoard from './SmashScoreBoard';
 
+// Defining some constants
 const width = 8
 const squareColors = [
     "red",
@@ -21,8 +23,9 @@ const SquareSmash = () => {
         for (let i = 0; i <= 39; i++) {
             const columnFour = [i, i + width, i + width * 2, i + width * 3]
             const chosenColor = currentColorGroup[i]
+            const blankSquare = currentColorGroup[i] === ''
 
-            if (columnFour.every(square => currentColorGroup[square] === chosenColor)) {
+            if (columnFour.every(square => currentColorGroup[square] === chosenColor && !blankSquare)) {
                 setScoreDisplay((score) => score + 4)
                 columnFour.forEach(square => currentColorGroup[square] = '')
                 return true;
@@ -35,10 +38,12 @@ const SquareSmash = () => {
             const rowFour = [i, i + 1, i + 2, i +3]
             const chosenColor = currentColorGroup[i]
             const noCheck = [5, 6, 7, 13, 14, 15, 21, 22, 23, 29, 30, 31, 37, 38, 39, 45, 46, 47, 53, 54, 55, 62, 63, 64]
+            const blankSquare = currentColorGroup[i] === ''
 
             if (noCheck.includes(i)) continue
 
-            if (rowFour.every(square => currentColorGroup[square] === chosenColor)) {
+            if (rowFour.every(square => currentColorGroup[square] === chosenColor && !blankSquare)) {
+                setScoreDisplay((score) => score + 4)
                 rowFour.forEach(square => currentColorGroup[square] = '')
                 return true;
             }
@@ -49,8 +54,10 @@ const SquareSmash = () => {
         for (let i = 0; i <= 47; i++) {
             const columnThree = [i, i + width, i + width * 2]
             const chosenColor = currentColorGroup[i]
+            const blankSquare = currentColorGroup[i] === ''
 
-            if (columnThree.every(square => currentColorGroup[square] === chosenColor)) {
+            if (columnThree.every(square => currentColorGroup[square] === chosenColor && !blankSquare)) {
+                setScoreDisplay((score) => score + 3)
                 columnThree.forEach(square => currentColorGroup[square] = '')
                 return true;
             }
@@ -62,10 +69,12 @@ const SquareSmash = () => {
             const rowThree = [i, i + 1, i + 2]
             const chosenColor = currentColorGroup[i]
             const noCheck = [6, 7, 14, 15, 22, 23, 30, 31, 38, 39, 46, 47, 54, 55, 63, 64]
+            const blankSquare = currentColorGroup[i] === ''
 
             if (noCheck.includes(i)) continue
 
-            if (rowThree.every(square => currentColorGroup[square] === chosenColor)) {
+            if (rowThree.every(square => currentColorGroup[square] === chosenColor && !blankSquare)) {
+                setScoreDisplay((score) => score + 3)
                 rowThree.forEach(square => currentColorGroup[square] = '')
                 return true;
             }
@@ -171,6 +180,7 @@ const SquareSmash = () => {
                     />
                 ))}
             </div>
+            <SmashScoreBoard score={scoreDisplay} />
         </div>
     )
 };
