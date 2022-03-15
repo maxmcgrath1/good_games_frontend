@@ -125,7 +125,8 @@
 
 .smashGameContainer {
   display: flex;
-  padding: 30px;
+  padding: 50px;
+  justify-content: center;
 }
 
 .smashGameBoard {

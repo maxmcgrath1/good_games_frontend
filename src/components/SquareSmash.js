@@ -90,6 +90,7 @@ const SquareSmash = () => {
 
     return (
         <div className='smashGameContainer'>
+            {/* <h1 className='gameTitle'>Square Smash!</h1> */}
             <div className='smashGameBoard'>
                 {currentColorGroup.map((squareColor, index) => (
                     <img
