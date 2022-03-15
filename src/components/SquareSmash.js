@@ -63,6 +63,15 @@ const SquareSmash = () => {
             }
         }
     };
+    
+const moveSquareDown = () => {
+    for (let i=0; i < 64 - width; i++) {
+        if ((currentColorGroup[i + width]) === '') {
+            currentColorGroup[i + width] = currentColorGroup[i]
+            currentColorGroup[i] = ''
+        }
+    }
+}
 
     const createBoard = () => {
         const randomColorGroup = []
@@ -81,10 +90,11 @@ const SquareSmash = () => {
             checkRowFour();
             checkColumnThree();
             checkRowThree();
+            moveSquareDown();
             setCurrentColorGroup([...currentColorGroup])
         }, 100)
         return () => clearInterval(timer)
-    }, [checkColumnFour, checkRowFour, checkColumnThree, checkRowThree, currentColorGroup]);
+    }, [checkColumnFour, checkRowFour, checkColumnThree, checkRowThree, moveSquareDown, currentColorGroup]);
 
     console.log(currentColorGroup);
 
