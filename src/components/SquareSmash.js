@@ -23,6 +23,7 @@ const SquareSmash = () => {
 
             if (columnFour.every(square => currentColorGroup[square] === chosenColor)) {
                 columnFour.forEach(square => currentColorGroup[square] = '')
+                return true;
             }
         }
     };
@@ -37,6 +38,7 @@ const SquareSmash = () => {
 
             if (rowFour.every(square => currentColorGroup[square] === chosenColor)) {
                 rowFour.forEach(square => currentColorGroup[square] = '')
+                return true;
             }
         }
     };
@@ -48,6 +50,7 @@ const SquareSmash = () => {
 
             if (columnThree.every(square => currentColorGroup[square] === chosenColor)) {
                 columnThree.forEach(square => currentColorGroup[square] = '')
+                return true;
             }
         }
     };
@@ -62,6 +65,7 @@ const SquareSmash = () => {
 
             if (rowThree.every(square => currentColorGroup[square] === chosenColor)) {
                 rowThree.forEach(square => currentColorGroup[square] = '')
+                return true;
             }
         }
     };
@@ -100,8 +104,32 @@ const SquareSmash = () => {
 
         currentColorGroup[replacedId] = squareBeingMoved.style.backgroundColor
         currentColorGroup[movedId] = squareBeingReplaced.style.backgroundColor
+
         console.log(movedId)
         console.log(replacedId)
+
+        const validMoves = [
+            movedId + 1,
+            movedId - 1,
+            movedId + width,
+            movedId - width
+        ];
+
+        const validMove = validMoves.includes(replacedId)
+
+        const columnOfFour = checkColumnFour
+        const rowOfFour = checkRowFour
+        const columnOfThree = checkColumnThree
+        const rowOfThree = checkRowThree
+
+        if (replacedId && validMove && (columnOfFour || rowOfFour || columnOfThree || rowOfThree)) {
+            setSquareBeingMoved(null)
+            setSquareBeingReplaced(null)
+        } else {
+            currentColorGroup[replacedId] = squareBeingReplaced.style.backgroundColor
+            currentColorGroup[movedId] = squareBeingMoved.style.backgroundColor
+            setCurrentColorGroup([...currentColorGroup])
+        }
     };
 
     const createBoard = () => {
