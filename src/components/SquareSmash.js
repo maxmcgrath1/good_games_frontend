@@ -4,7 +4,7 @@ import SquareSmashGame from './SquareSmashGame'
 const SquareSmash = () => {
     return (
         <div className="smashGameBack">
-        <h1 className='gameTitle'>SqaureSmash!</h1>
+        <h1 className='gameTitle'>SquareSmash!</h1>
         <SquareSmashGame />
     </div>
     )

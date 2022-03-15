@@ -161,13 +161,12 @@ const SquareSmashGame = () => {
 
     return (
         <div className='smashGameContainer'>
-            {/* <h1 className='gameTitle'>Square Smash!</h1> */}
             <div className='smashGameBoard'>
                 {currentColorGroup.map((squareColor, index) => (
                     <img
                         key={index}
                         style={{backgroundColor: squareColor}}
-                        alt={squareColor}
+                        // alt={squareColor}
                         data-id={index}
                         draggable={true}
                         onDragStart={dragStart}
