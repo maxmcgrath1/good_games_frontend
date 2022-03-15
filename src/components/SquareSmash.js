@@ -66,6 +66,14 @@ const SquareSmash = () => {
     
 const moveSquareDown = () => {
     for (let i=0; i < 64 - width; i++) {
+        const rowOne = [0, 1, 2, 3, 4, 5, 6, 7]
+        const rowOneSquare = rowOne.includes(i)
+
+        if (rowOneSquare && currentColorGroup[i] === '') {
+            let randomNumber = Math.floor(Math.random() * sqaureColors.length)
+            currentColorGroup[i] = sqaureColors[randomNumber]
+        }
+
         if ((currentColorGroup[i + width]) === '') {
             currentColorGroup[i + width] = currentColorGroup[i]
             currentColorGroup[i] = ''
