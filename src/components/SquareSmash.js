@@ -13,6 +13,8 @@ const sqaureColors = [
 
 const SquareSmash = () => {
     const [currentColorGroup, setCurrentColorGroup] = useState([]);
+    const [sqaureBeingMoved, setSqaureBeingMoved] = useState(null);
+    const [sqaureBeingReplaced, setSqaureBeingReplaced] = useState(null);
 
     const checkColumnFour = () => {
         for (let i = 0; i <= 39; i++) {
@@ -84,13 +86,14 @@ const SquareSmash = () => {
     const dragStart = (event) => {
         console.log(event.target)
         console.log(dragStart)
+        setSqaureBeingMoved(event.target)
     };
     const dragDrop = (event) => {
         console.log(event.target)
         console.log(dragDrop)
+        setSqaureBeingReplaced(event.target)
     };
     const dragEnd = (event) => {
-        console.log(event.target)
         console.log(dragEnd)
     };
 
