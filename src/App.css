@@ -9,8 +9,14 @@
   padding: 0 0 260px 0;
 }
 
-.gameBack {
+.ticTacBack {
   background-image: url("https://www.teahub.io/photos/full/6-62739_high-resolution-cartoon-wallpapers-23687-hd-wallpapers-4d.jpg");
+  background-size: cover;
+  padding: 0 0 220px 0;
+}
+
+.smashGameBack {
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Cool-Backgrounds-Wide-Wallpapers.jpg");
   background-size: cover;
   padding: 0 0 220px 0;
 }
@@ -61,6 +67,9 @@
 }
 
 .gameList {
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Cool-HD-Background-Images-620x388.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 650px;
   border: solid teal 2px;
 }
@@ -114,6 +123,11 @@
   height: 500px;
 }
 
+.slideImage {
+  height: 400px;
+  width: 600px;
+}
+
 .slideName {
   color: red;
 }
@@ -134,10 +148,19 @@
   width: 560px;
   display: flex;
   flex-wrap: wrap;
+  outline-color: white;
+  outline-style:groove;
+  outline-width: 20px;
 }
 
 .smashGameBoard img {
   height: 70px;
   width: 70px;
+}
+
+.smashScoreBoard {
+  width: 560px;
+  color: red;
+  padding: 30px;
 }
 

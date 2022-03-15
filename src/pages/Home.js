@@ -9,37 +9,37 @@ const Home = () => {
                 <Carousel fade>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="slideImage"
                             src="https://media.istockphoto.com/photos/ticktacktoe-on-chalkboard-picture-id1134456281?k=20&m=1134456281&s=612x612&w=0&h=Qf7ajVwWoqf2z_6FqdAWGVCHbUMOdXApqdS6brx-w00="
-                            alt="Tic-Tac-Toe"
+                            alt="Tic-Tac-Toe Slide"
                         />
                         <Carousel.Caption>
-                            <h3 className='slideName'>Tic-Tac-Toe</h3>
-                            <p className='slideText'>It'll always be good.</p>
+                            {/* <h3 className='slideName'>Tic-Tac-Toe</h3>
+                            <p className='slideText'>It'll always be good.</p> */}
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
-                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.SRzccZ8iRnfXTRYQk0jrqQHaGu%26pid%3DApi&f=1"
-                            alt="Blackjack"
+                            className="slideImage"
+                            src="https://i.imgur.com/9UbaFV6.png"
+                            alt="SquareSmash Slide"
                         />
 
                         <Carousel.Caption>
-                            <h3 className='slideName'>Blackjack</h3>
-                            <p className='slideText'>This is a good card game.</p>
+                            {/* <h3 className='slideName'>SquareSmah</h3>
+                            <p className='slideText'>This is a good card game.</p> */}
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
-                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.o13ZDt5EmLrlXBwqPRja1QAAAA%26pid%3DApi&f=1"
-                            alt="Third slide"
+                            className="slideImage"
+                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.vVYr1XFkLxGDg_eY8UjZ9gHaEP%26pid%3DApi&f=1"
+                            alt="Blackjack Slide"
                         />
 
                         <Carousel.Caption>
-                            <h3 className='slideName'>Third game name</h3>
-                            <p className='slideText'>A third good game</p>
+                            {/* <h3 className='slideName'>Blackjack</h3>
+                            <p className='slideText'>This is a good card game</p> */}
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

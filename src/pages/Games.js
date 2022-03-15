@@ -59,7 +59,7 @@ const Games = (props) => {
                     Edit Game
                 </Link>
                 <Counter />
-                <Button variant="outline-info" href={`/games/${game.name}`}>Play Game</Button>
+                <Button variant="outline-info" href={`/games/${game.name}`}>Play {game.name}</Button>
             </div>
         ))
     }
@@ -69,7 +69,7 @@ const Games = (props) => {
     }
 
     return (
-        <div>
+        <div className='gameListContainer'>
             <section>
             <form onSubmit={handleSubmit}>
                 <input
