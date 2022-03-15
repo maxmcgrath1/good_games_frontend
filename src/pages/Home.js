@@ -21,7 +21,7 @@ const Home = () => {
                     <Carousel.Item>
                         <img
                             className="slideImage"
-                            src="https://i.imgur.com/9UbaFV6.png"
+                            src="https://i.imgur.com/PGcQ5He.png"
                             alt="SquareSmash Slide"
                         />
 
