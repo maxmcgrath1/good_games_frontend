@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 
 const width = 8
-const sqaureColors = [
+const squareColors = [
     "red",
     "blue",
     "yellow",
@@ -13,8 +13,8 @@ const sqaureColors = [
 
 const SquareSmash = () => {
     const [currentColorGroup, setCurrentColorGroup] = useState([]);
-    const [sqaureBeingMoved, setSqaureBeingMoved] = useState(null);
-    const [sqaureBeingReplaced, setSqaureBeingReplaced] = useState(null);
+    const [squareBeingMoved, setSquareBeingMoved] = useState(null);
+    const [squareBeingReplaced, setSquareBeingReplaced] = useState(null);
 
     const checkColumnFour = () => {
         for (let i = 0; i <= 39; i++) {
@@ -72,8 +72,8 @@ const SquareSmash = () => {
             const rowOneSquare = rowOne.includes(i)
 
             if (rowOneSquare && currentColorGroup[i] === '') {
-                let randomNumber = Math.floor(Math.random() * sqaureColors.length)
-                currentColorGroup[i] = sqaureColors[randomNumber]
+                let randomNumber = Math.floor(Math.random() * squareColors.length)
+                currentColorGroup[i] = squareColors[randomNumber]
             }
 
             if ((currentColorGroup[i + width]) === '') {
@@ -86,21 +86,28 @@ const SquareSmash = () => {
     const dragStart = (event) => {
         console.log(event.target)
         console.log(dragStart)
-        setSqaureBeingMoved(event.target)
+        setSquareBeingMoved(event.target)
     };
     const dragDrop = (event) => {
         console.log(event.target)
         console.log(dragDrop)
-        setSqaureBeingReplaced(event.target)
+        setSquareBeingReplaced(event.target)
     };
     const dragEnd = (event) => {
         console.log(dragEnd)
+        const movedId = parseInt(squareBeingMoved.getAttribute('data-id'))
+        const replacedId = parseInt(squareBeingReplaced.getAttribute('data-id'))
+
+        currentColorGroup[replacedId] = squareBeingMoved.style.backgroundColor
+        currentColorGroup[movedId] = squareBeingReplaced.style.backgroundColor
+        console.log(movedId)
+        console.log(replacedId)
     };
 
     const createBoard = () => {
         const randomColorGroup = []
         for (let i=0; i< width * width; i++) {
-            const randomColor = sqaureColors[Math.floor(Math.random() * sqaureColors.length)]
+            const randomColor = squareColors[Math.floor(Math.random() * squareColors.length)]
             randomColorGroup.push(randomColor)
         }
         setCurrentColorGroup(randomColorGroup)
