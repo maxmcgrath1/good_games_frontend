@@ -64,21 +64,21 @@ function Show(props) {
                     type="text"
                     value={editGame.name}
                     name="name"
-                    placeholder="name"
+                    placeholder={game.name}
                     onChange={handleChange}
                 />
                 <input
                     type="text"
                     value={editGame.image}
                     name="image"
-                    placeholder="image URL"
+                    placeholder={game.image}
                     onChange={handleChange}
                 />
                 <input
                     type="text"
                     value={editGame.description}
                     name="description"
-                    placeholder="description"
+                    placeholder={game.description}
                     onChange={handleChange}
                 />
                 <input type="submit" value="Update Game" />
