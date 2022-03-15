@@ -9,13 +9,13 @@ const sqaureColors = [
     "green",
     "orange",
     "purple"
-]
+];
 
 const SquareSmash = () => {
     const [currentColorGroup, setCurrentColorGroup] = useState([]);
 
     const checkColumnFour = () => {
-        for (let i = 0; i< 39; i++) {
+        for (let i = 0; i <= 39; i++) {
             const columnFour = [i, i + width, i + width * 2, i + width * 3]
             const chosenColor = currentColorGroup[i]
 
@@ -40,7 +40,7 @@ const SquareSmash = () => {
     };
 
     const checkColumnThree = () => {
-        for (let i = 0; i< 47; i++) {
+        for (let i = 0; i <= 47; i++) {
             const columnThree = [i, i + width, i + width * 2]
             const chosenColor = currentColorGroup[i]
 
@@ -51,7 +51,7 @@ const SquareSmash = () => {
     };
 
     const checkRowThree = () => {
-        for (let i = 0; i< 64; i++) {
+        for (let i = 0; i < 64; i++) {
             const rowThree = [i, i + 1, i + 2]
             const chosenColor = currentColorGroup[i]
             const noCheck = [6, 7, 14, 15, 22, 23, 30, 31, 38, 39, 46, 47, 54, 55, 63, 64]
@@ -64,22 +64,35 @@ const SquareSmash = () => {
         }
     };
     
-const moveSquareDown = () => {
-    for (let i=0; i < 64 - width; i++) {
-        const rowOne = [0, 1, 2, 3, 4, 5, 6, 7]
-        const rowOneSquare = rowOne.includes(i)
+    const moveSquareDown = () => {
+        for (let i = 0; i <= 55; i++) {
+            const rowOne = [0, 1, 2, 3, 4, 5, 6, 7]
+            const rowOneSquare = rowOne.includes(i)
 
-        if (rowOneSquare && currentColorGroup[i] === '') {
-            let randomNumber = Math.floor(Math.random() * sqaureColors.length)
-            currentColorGroup[i] = sqaureColors[randomNumber]
-        }
+            if (rowOneSquare && currentColorGroup[i] === '') {
+                let randomNumber = Math.floor(Math.random() * sqaureColors.length)
+                currentColorGroup[i] = sqaureColors[randomNumber]
+            }
 
-        if ((currentColorGroup[i + width]) === '') {
-            currentColorGroup[i + width] = currentColorGroup[i]
-            currentColorGroup[i] = ''
+            if ((currentColorGroup[i + width]) === '') {
+                currentColorGroup[i + width] = currentColorGroup[i]
+                currentColorGroup[i] = ''
+            }
         }
-    }
-}
+    };
+
+    const dragStart = (event) => {
+        console.log(event.target)
+        console.log(dragStart)
+    };
+    const dragDrop = (event) => {
+        console.log(event.target)
+        console.log(dragDrop)
+    };
+    const dragEnd = (event) => {
+        console.log(event.target)
+        console.log(dragEnd)
+    };
 
     const createBoard = () => {
         const randomColorGroup = []
@@ -104,8 +117,6 @@ const moveSquareDown = () => {
         return () => clearInterval(timer)
     }, [checkColumnFour, checkRowFour, checkColumnThree, checkRowThree, moveSquareDown, currentColorGroup]);
 
-    console.log(currentColorGroup);
-
     return (
         <div className='smashGameContainer'>
             {/* <h1 className='gameTitle'>Square Smash!</h1> */}
@@ -115,6 +126,14 @@ const moveSquareDown = () => {
                         key={index}
                         style={{backgroundColor: squareColor}}
                         alt={squareColor}
+                        data-id={index}
+                        draggable={true}
+                        onDragStart={dragStart}
+                        onDragOver={(event) => event.preventDefault()}
+                        onDragEnter={(event) => event.preventDefault()}
+                        onDragLeave={(event) => event.preventDefault()}
+                        onDrop={dragDrop}
+                        onDragEnd={dragEnd}
                     />
                 ))}
             </div>
