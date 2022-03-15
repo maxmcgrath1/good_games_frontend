@@ -180,7 +180,7 @@ const SquareSmash = () => {
                     />
                 ))}
             </div>
-            <SmashScoreBoard score={scoreDisplay} />
+                <h2>Your current score is:<SmashScoreBoard score={scoreDisplay} /></h2>
         </div>
     )
 };
