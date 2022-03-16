@@ -55,9 +55,9 @@ const Games = (props) => {
                 <h1 className='gameName'>{game.name}</h1>
                 <img className='gameImage' src={game.image} alt={game.name} />
                 <h3 className="gameDescription">{game.description}</h3>
-                <Link to={`/games/${game._id}`}>
+                {/* <Link to={`/games/${game._id}`}>
                     Edit Game
-                </Link>
+                </Link> */}
                 <Counter />
                 <Button variant="outline-info" href={`/games/${game.name}`}>Play {game.name}</Button>
             </div>
