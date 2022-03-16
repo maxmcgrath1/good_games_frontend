@@ -58,7 +58,7 @@ const Games = (props) => {
                 {/* <Link to={`/games/${game._id}`}>
                     Edit Game
                 </Link> */}
-                <Counter />
+                {/* <Counter /> */}
                 <Button variant="outline-info" href={`/games/${game.name}`}>Play {game.name}</Button>
             </div>
         ))
@@ -71,7 +71,7 @@ const Games = (props) => {
     return (
         <div className='gameListContainer'>
             <section>
-            <form onSubmit={handleSubmit}>
+            {/* <form onSubmit={handleSubmit}>
                 <input
                     type="text"
                     value={newGame.name}
@@ -94,7 +94,7 @@ const Games = (props) => {
                     onChange={handleChange}
                 />
                 <input type="submit" value="Add Game" />
-            </form>
+            </form> */}
         </section>
             {games ? loaded() : loading()}
         </div>
