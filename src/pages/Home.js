@@ -10,7 +10,7 @@ const Home = () => {
                     <Carousel.Item>
                         <img
                             className="slideImage"
-                            src="https://media.istockphoto.com/photos/ticktacktoe-on-chalkboard-picture-id1134456281?k=20&m=1134456281&s=612x612&w=0&h=Qf7ajVwWoqf2z_6FqdAWGVCHbUMOdXApqdS6brx-w00="
+                            src="https://i.imgur.com/P4LLvvm.png"
                             alt="Tic-Tac-Toe Slide"
                         />
                         <Carousel.Caption>
