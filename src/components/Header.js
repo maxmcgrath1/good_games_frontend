@@ -16,9 +16,9 @@ function Header() {
                     <Nav.Link eventKey="/about" href="/about">ABOUT/CONTACT</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    {/* <Nav.Link eventKey="disabled" disabled>
+                    <Nav.Link eventKey="disabled" disabled>
                         LOGIN/SIGNUP
-                    </Nav.Link> */}
+                    </Nav.Link>
                 </Nav.Item>
             </Nav>
         </div>
