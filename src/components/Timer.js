@@ -1,8 +1,13 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 
 const Timer = () => {
+    const [timer, setTimer] = useState(60);
+    useEffect(() => {
+        timer > 0 && setTimeout(() => setTimer(timer - 1), 1000)
+    }, [timer]);
     return (
-        <div>Timer</div>
+        <h1>Time left: {timer}</h1>
     )
 }
 
