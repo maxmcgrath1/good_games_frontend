@@ -7,7 +7,7 @@ const Timer = () => {
         timer > 0 && setTimeout(() => setTimer(timer - 1), 1000)
     }, [timer]);
     return (
-        <h1>Time left: {timer}</h1>
+        <h1 className='gameTimer'>Time left: {timer}</h1>
     )
 }
 

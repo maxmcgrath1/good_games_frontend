@@ -33,15 +33,20 @@
   }
 } */
 
-.App {
+/* .App {
   text-align: center;
   
+} */
+
+.about {
+  text-align: center;
 }
 
 .home {
   background-image: url("https://wallpaperaccess.com/full/273307.jpg");
   background-size: cover;
   padding: 0 0 290px 0;
+  text-align: center;
 }
 
 .homeMessage {
@@ -68,10 +73,13 @@
   border: solid teal 2px;
 }
 
+.gameListContainer {
+  text-align: center;
+}
+
 .gameName {
   color: red;
   padding: 50px 0 0 0;
-
 }
 
 .gameImage {
@@ -98,9 +106,15 @@
   padding: 30px;
 }
 
+.gameTimer {
+  border: solid red 5px;
+}
+
 .maintitle {
   color: red;
+  text-align: center;
 }
+
 .gameBoard {
   display: grid;
   margin: 0 auto;
@@ -165,3 +179,6 @@
   padding: 30px;
 }
 
+.timerContainer {
+  justify-content: left;
+}
