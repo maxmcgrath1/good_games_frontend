@@ -105,10 +105,13 @@
 .gameTitle {
   color: rgb(6, 218, 247);
   padding: 30px;
+  text-align: center;
 }
 
 .gameTimer {
-  border: solid red 5px;
+  /* border: solid red 2px; */
+  width: 30vh;
+  color: purple
 }
 
 .maintitle {
@@ -178,8 +181,11 @@
   width: 560px;
   color: red;
   padding: 30px;
+  text-align: center;
 }
 
 .timerContainer {
-  justify-content: left;
+  display: flex;
+  margin-left: 10%;
+  text-align: center;
 }
