@@ -130,9 +130,10 @@
   font-size: 30px;
 };
 
-.square {
-  border: solid red 5px;
-  color: blue;
+button.square {
+  height: 150px;
+  width: 150px;
+  background-color: aqua;
 }
 
 
