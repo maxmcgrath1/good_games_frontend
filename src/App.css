@@ -122,20 +122,11 @@
 .gameBoard {
   display: grid;
   margin: 0 auto;
-  grid-template-columns: repeat(3, auto);
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   height: 500px;
   width: 500px;
-	background-color: blue;
   border: solid red 7px;
-  font-size: 30px;
 };
-
-button.square {
-  height: 150px;
-  width: 150px;
-  background-color: aqua;
-}
-
 
 .slideContainer {
   display: flex;
