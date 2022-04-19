@@ -28,15 +28,17 @@ const Board = () => {
     );
 
     function renderSquare(i) {
-        return <Square value={squares[i]} onClick={() => {
-                    if (squares[i] != null || winner != null) {
-                        return;
-                    }
-                    const newSquares = squares.slice();
-                    newSquares[i] = nextPlayer
-                    setSquares(newSquares);
-                    setPlayer(!player);
-                }} />;
+        return (
+            <Square value={squares[i]} onClick={() => {
+                if (squares[i] != null || winner != null) {
+                    return;
+                }
+                const newSquares = squares.slice();
+                newSquares[i] = nextPlayer
+                setSquares(newSquares);
+                setPlayer(!player);
+            }} />
+        )
     };
 
     function checkWin(squares) {
