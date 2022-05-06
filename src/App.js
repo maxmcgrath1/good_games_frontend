@@ -9,7 +9,6 @@ import Show from './pages/Show';
 import Tictactoe from './components/Tictactoe';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SquareSmash from './components/SquareSmash';
-// import GameList from './components/GameList';
 
 function App() {
   const URL = "https://capstone-good-games.herokuapp.com/"
