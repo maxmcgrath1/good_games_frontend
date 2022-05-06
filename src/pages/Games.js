@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import Counter from '../components/Counter';
 import Button from 'react-bootstrap/esm/Button';
 
 const Games = (props) => {
