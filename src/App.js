@@ -1,5 +1,4 @@
 import './App.css';
-import './tictactoe.css'
 import { Route, Routes } from "react-router-dom"
 import Header from './components/Header';
 import Home from './pages/Home';
