@@ -10,7 +10,7 @@ import SquareSmash from './components/SquareSmash';
 // import Show from './pages/Show';
 
 function App() {
-  const URL = "https://capstone-good-games.herokuapp.com/"
+  const URL = "https://good-games-backend.onrender.com/"
   return (
     <div className="App">
       <Header />
