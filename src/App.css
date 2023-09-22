@@ -42,6 +42,11 @@
   text-align: center;
 }
 
+.body {
+  background: black;
+  background-color: black;
+}
+
 .home {
   background-image: url("https://wallpaperaccess.com/full/273307.jpg");
   background-size: cover;
