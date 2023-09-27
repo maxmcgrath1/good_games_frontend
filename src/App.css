@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-body {
-  background: black;
-  background-color: black;
-}
-
 .home {
   background-image: url("https://wallpaperaccess.com/full/273307.jpg");
   background: cover;
@@ -37,6 +32,7 @@ body {
   background-size: cover;
   height: 650px;
   border: solid teal 2px;
+  background: black;
 }
 
 .gameListContainer {
@@ -86,6 +82,10 @@ body {
 }
 
 .nav-item {
+  background: black;
+}
+
+.nav__container {
   background: black;
 }
 
