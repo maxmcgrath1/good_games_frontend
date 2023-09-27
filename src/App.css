@@ -2,10 +2,18 @@
   text-align: center;
 }
 
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
 .home {
-  background-image: url("https://wallpaperaccess.com/full/273307.jpg");
-  background: cover;
-  padding: 0 0 290px 0;
+  background: url("https://wallpaperaccess.com/full/273307.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem;
   text-align: center;
 }
 
