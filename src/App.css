@@ -18,7 +18,8 @@ body, html {
 }
 
 .homeMessage {
-  color: teal;
+  color: rgb(9, 243, 243);
+  background: black;
 }
 
 .ticTacBack {
