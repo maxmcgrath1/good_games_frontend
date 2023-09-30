@@ -41,7 +41,6 @@ body, html {
   background-size: cover;
   height: 650px;
   border: solid teal 2px;
-  background: black;
 }
 
 .gameListContainer {
